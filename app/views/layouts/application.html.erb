@@ -43,7 +43,7 @@
               <li class="col-md-1"> </li>
               <li class="col-md-3 logout"><%= link_to('Logout', destroy_user_session_path, class: 'btn btn-xs btn-danger', title: 'Logout', :method => :delete) %></li>
             <% else %>
-              <li class="col-md-4 pull-right">
+              <li class="col-md-4 pull-right" style="margin-top:4px;">
                 <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
               </li>
             <% end %>
@@ -60,7 +60,7 @@
         </div>
       </div><!--/row-->
 
-      <footer>
+      <footer style="text-align:center; padding:20px; margin-top: 210px;">
         <p>&copy; Adarsh 2023</p>
       </footer>
 

@@ -81,3 +81,14 @@ margin-top: 5%;
     list-style: none;
     padding-left: 0;
   }
+  .card{
+    height: 200px;
+    width:300px;
+    border: 1px black solid;
+    border-radius: 5px;
+    margin-right:20px;
+  }
+  .card:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    // background: red;
+  }
