@@ -25,16 +25,6 @@ Rails.application.configure do
 
     config.cache_store = :null_store
   end
-
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :user_name => 'b6151c25ecd14f',
-    :password => '9e046f945d4b2f',
-    :address => 'sandbox.smtp.mailtrap.io',
-    :host => 'sandbox.smtp.mailtrap.io',
-    :port => '2525',
-    :authentication => :cram_md5
-  }
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
