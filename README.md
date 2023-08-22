@@ -18,4 +18,7 @@ rails generate devise:views:locale en
 rails generate devise:views:bootstrap_templates
 Also, in the application.css file under app/assets/stylesheets folder, right above the line that says *= require_tree add in the following line:
 
-
+The way the JavaScript is going to flow is once signup form is submitted, the
+JavaScript basically stops the regular handling of the submission, grabs the payment details, sends
+it to Stripe. Stripe, verifies this info and sends a token back.
+At that point, the JavaScript strips the credit card payment info and then submits the form to the server.
