@@ -1,5 +1,8 @@
 $(document).on('ready turbolinks:load', function() {
-
+    /* Upon the submission of the form from the signup page, it intercepts the default
+        event, which is the form submission to hit the create action in the registrations controller.
+        It stops that from happening and then it does something else.
+    */
     var show_error, stripeResponseHandler, submitHandler;
 
     submitHandler = function (event) {
@@ -28,7 +31,7 @@ $(document).on('ready turbolinks:load', function() {
             token = response.id;
             $form.append($("<input type=\"hidden\" name=\"payment[token]\" />").val(token));
             $("[data-stripe=number]").remove();
-            $("[data-stripe=cvv]").remove();
+            $("[data-stripe=cvc]").remove();
             $("[data-stripe=exp-year]").remove();
             $("[data-stripe=exp-month]").remove();
             $("[data-stripe=label]").remove();
