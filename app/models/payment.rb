@@ -16,9 +16,9 @@ class Payment < ApplicationRecord
     customer = Stripe::Customer.create email: email, card: token
 
     Stripe::PaymentIntent.create customer: customer.id,
-                          amount: 1000, #cents
+                          amount: 1000, #rupees
                           description: 'Premium',
-                          currency: 'usd'
+                          currency: 'inr'
 
   end
 end
