@@ -18,7 +18,8 @@ class Payment < ApplicationRecord
     Stripe::PaymentIntent.create customer: customer.id,
                           amount: 1000, #rupees
                           description: 'Premium',
-                          currency: 'inr'
+                          currency: 'inr',
+                          payment_method_types: ['card']
 
   end
 end
