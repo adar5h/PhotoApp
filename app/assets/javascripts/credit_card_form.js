@@ -1,7 +1,7 @@
 $(document).on('ready turbolinks:load', function() {
     /* Upon the submission of the form from the signup page, it intercepts the default
         event, which is the form submission to hit the create action in the registrations controller.
-        It stops that from happening and then it does something else.
+        It stops that from happening.
     */
     var show_error, stripeResponseHandler, submitHandler;
 

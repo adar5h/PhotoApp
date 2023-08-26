@@ -22,3 +22,12 @@ The way the JavaScript is going to flow is once signup form is submitted, the
 JavaScript basically stops the regular handling of the submission, grabs the payment details, sends
 it to Stripe. Stripe, verifies this info and sends a token back.
 At that point, the JavaScript strips the credit card payment info and then submits the form to the server.
+
+Demo credit cards:
+TYPE                    CARD NO.            CVV             EXP. DATE
+Visa	                4242424242424242	Any 3 digits	Any future date
+Visa (debit)	        4000056655665556	Any 3 digits	Any future date
+Mastercard	            5555555555554444	Any 3 digits	Any future date
+Mastercard (2-series)	2223003122003222	Any 3 digits	Any future date
+Mastercard (debit)	    5200828282828210	Any 3 digits	Any future date
+Mastercard (prepaid)	5105105105105100	Any 3 digits	Any future date
