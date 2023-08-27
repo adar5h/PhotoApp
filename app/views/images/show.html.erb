@@ -9,7 +9,7 @@
   <dt>Picture:</dt>
   <dd><%= image_tag @image.picture.url, size: '300x300' if @image.picture? %></dd>
   <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
-  <dd><%= @image.user_id %></dd>
+  <dd><%= @image.user.email %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
