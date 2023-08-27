@@ -12,4 +12,6 @@ class User < ApplicationRecord
   # With this setup, if you want to create a user along with payment for that user in a single form submission, you can do something like this in your controller and view.
   # When the user form is submitted, the attributes for both the user and the associated payment are sent to the controller.
   # The accepts_nested_attributes_for declaration in the User model allows the nested attributes for payment to be processed and associated with the user.
+
+  has_many :images
 end
