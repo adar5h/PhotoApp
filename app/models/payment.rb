@@ -1,5 +1,5 @@
 class Payment < ApplicationRecord
-  attr_accessor :card_number, :card_cvv, :card_expires_month, :card_expires_year
+  attr_accessor :card_number, :card_cvv, :card_expires_month, :card_expires_year, :payment_method
   # The credit card details are not going to be stored in our DB but the Payment model needs to work with attributes.
   # in order for the JS to send the information to Stripe and then get rid of it.
   belongs_to :user
@@ -14,12 +14,11 @@ class Payment < ApplicationRecord
 
   def process_payment
     customer = Stripe::Customer.create email: email, card: token
-
     Stripe::PaymentIntent.create customer: customer.id,
-                          amount: 1000, #rupees
+                          amount: 100000, #paisa
                           description: 'Premium',
                           currency: 'inr',
-                          payment_method_types: ['card']
-
+                          payment_method_types: ['card'],
+                          payment_method: 'pm_card_visa'
   end
 end
