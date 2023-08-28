@@ -2,8 +2,10 @@
   <h3>Welcome: <%= current_user.email %></h3>
   <h5>Your subscription will be renewed on <%= current_user.created_at + 1.years %></h5>
   <center><h6>Your random image feed for today</h6></center>
-  <img src="https://picsum.photos/200", width=400 ,height=400, style="border: 1px solid black; border-radius:10px;">
-  <img src="https://loremflickr.com/320/240", width=500 ,height=500, style="border: 1px solid black; border-radius:10px;" />
+  <center>
+    <img src="https://picsum.photos/200", width=400 ,height=400, style="border: 1px solid black; border-radius:10px;">
+    <img src="https://loremflickr.com/320/240", width=530 ,height=430, style="border: 1px solid black; border-radius:10px;" />
+  </center>
 <% else %>
   <div class="jumbotron">
     <h2>Welcome to the Photo Management App!</h2>
